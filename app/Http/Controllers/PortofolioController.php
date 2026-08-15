@@ -8,7 +8,7 @@ class PortofolioController extends Controller
 {
     public function index()
 {
-    $nama = 'Laila Permata Sari';
+    $nama = 'Nisriina Gede Rizq Annaafi';
     $bio  = 'Programming';
     return view('portofolio.index',
         compact('nama', 'bio'));
