@@ -1,14 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HelloController; 
+use App\Http\Controllers\PortofolioController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/portofolio', [PortofolioController::class, 'index'])
+    ->name('portofolio.index');
 
-Route::get('hello', function() {
-    echo "<h1>Hello world !!</h1>";
-});
-
-Route::get('/hi', [HelloController:: class, 'index']);
+    Route::get('/portofolio/{skill}', [PortofolioController::class, 'skill'])
+    ->name('portfolio.detail');
