@@ -1,3 +1,3 @@
 <div>
-    Nama temen: {{$temen}}
+    Namanya temen: {{$temen}}
 </div>
