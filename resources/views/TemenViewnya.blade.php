@@ -1,3 +1,3 @@
 <div>
-    Namanya temen: {{$temen}}
+    Namanya temen siapa: {{$temen}}
 </div>
