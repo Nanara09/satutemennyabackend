@@ -1,3 +1,8 @@
+@extends('app')
+
+@section('content')
+@section('title','toko')
+
 <div>
     Three buns
     <br>
@@ -9,3 +14,5 @@
     Jam Buka:
     Buka setiap hari, tutup pas mood
 </div>
+
+@endsection
