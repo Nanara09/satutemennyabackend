@@ -16,7 +16,7 @@ class DashboardController extends Controller
     ["nama" => "Gina Maharani", "kelas" => "XI TKJ 2", "jurusan" => "TKJ"],
     ["nama" => "Hana Safitri", "kelas" => "XI TKJ 1", "jurusan" => "TKJ"],
     ["nama" => "Iqbal Maulana", "kelas" => "XI TKJ 2", "jurusan" => "TKJ"],
-    ["nama" => "Nabila Salsabila", "kelas" => "XI TKJ 1", "jurusan" => "TKJ"],
+    ["nama" => "Nabila Salsabila", "kelas" => "XI TKA 1", "jurusan" => "TKA"],
     ["nama" => "Rizky Firmansyahh", "kelas" => "XI TKP 2", "jurusan" => "TKP"]
 ];
 
