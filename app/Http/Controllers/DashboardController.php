@@ -17,7 +17,7 @@ class DashboardController extends Controller
     ["nama" => "Hana Safitri", "kelas" => "XI TKJ 1", "jurusan" => "TKJ"],
     ["nama" => "Iqbal Maulana", "kelas" => "XI TKJ 2", "jurusan" => "TKJ"],
     ["nama" => "Nabila Salsabila", "kelas" => "XI TKJ 1", "jurusan" => "TKJ"],
-    ["nama" => "Rizky Firmansyah", "kelas" => "XI TKJ 2", "jurusan" => "TKJ"]
+    ["nama" => "Rizky Firmansyahh", "kelas" => "XI TKP 2", "jurusan" => "TKP"]
 ];
 
     return view('ViewDashboard', compact('data'));
