@@ -1,24 +1,48 @@
-@extends('app')
+@extends('layout.app')
 
-@section('title', 'dahsboard')
+@section('sidebar')
+@include('sidebar')
+@endsection
+
+@section('navbar')
+@include('navbar')
+@endsection
 
 @section('content')
-<div>
-    Ini Dashboard
-</div>
-
-
-<table>
+<table border="1">
     <tr>
-        <td>nama</td>
-        <td>kelas</td>
-        <td>jurusan</td>
+        <td>Nama</td>
+        <td>Deskripsi</td>
+        <td>Harga</td>
+        <td>Jumlah</td>
     </tr>
-    @foreach($data as $d)
+    @foreach ($data as $d)
     <tr>
-        <td>{{ $d["nama"] }}</td>
-        <td>{{ $d["kelas"] }}</td>
-        <td>{{ $d["jurusan"] }}</td>
+        <td>{{$d['nama']}}</td>
+        <td>{{$d['deskripsi']}}</td>
+        <td>{{$d['harga']}}</td>
+        <td>{{$d['jumlah']}}</td>
+    </tr>
+    @endforeach
+</table>
+
+<br>
+<br>
+<br>
+
+    <table border="1">
+    <tr>
+        <td>Nama</td>
+        <td>Deskripsi</td>
+        <td>Harga</td>
+        <td>Jumlah</td>
+    </tr>
+    @foreach ($produk as $p)
+    <tr>
+        <td>{{$p['nama']}}</td>
+        <td>{{$p['deskripsi']}}</td>
+        <td>{{$p['harga']}}</td>
+        <td>{{$p['jumlah']}}</td>
     </tr>
     @endforeach
 </table>

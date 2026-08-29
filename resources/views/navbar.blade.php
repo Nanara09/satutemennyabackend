@@ -3,6 +3,6 @@
         <li>home</li>
         <li>contact</li>
         <li>about</li>
-        <li>produk</li>
+        <li>product</li>
     </ul>
 </nav>
