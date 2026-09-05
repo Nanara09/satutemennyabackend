@@ -1,52 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>@yield('title')</title>
     <style>
-        #sidebar{
-              position: absolute;
-                left: 0;
-        }
 
-        #navbar-content {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
 
-        #navbar nav ul{
-             display: flex;
-            gap: 10px;
-            list-style-type: none;
-        }
-
-        #content{
-
-        }
-
-        #wrapper {
-            display: flex;
-            justify-content: center;
-          
-
-        }
     </style>
 </head>
+
 <body>
-    <div id="wrapper">
-        <div id= "sidebar">
-         @yield('sidebar')
-        </div>
-        <div id="navbar-content">
-            <div id="navbar">
-                @yield('navbar')
+    <div id="wrapper" class="flex w-full ">
+        <div id="sidebar" class="w-1/6 bg-gradient-to-r from-green-100 h-screen">
+            <div class="flex justify-between items-start">
+            @yield('sidebar')
+            <hr class="border-2 border-blue h-screen">
             </div>
-            <div id="content">
+        </div>
+        <div id="navbar-content" class="w-5/6 bg-gradient-to-r from-blue-50">
+            <div id="navbar" class="mb-4">
+                @yield('navbar')
+                <hr class="border-2 border-blue">
+            </div>
+            <div id="content" class="flex flex-col justify-center px-10">
                 @yield('content')
             </div>
         </div>
     </div>
 </body>
+
 </html>
