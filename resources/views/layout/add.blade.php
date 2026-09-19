@@ -10,13 +10,13 @@
 
 <body>
     <div id="wrapper" class="flex w-full ">
-        <div id="sidebar" class="w-1/6 bg-gradient-to-r from-green-100 h-screen">
+        <div id="sidebar" class="w-1/6 bg-gradient-to from-green-100 h-screen">
             <div class="flex justify-between items-start">
             @yield('sidebar')
             <hr class="border-2 border-blue h-screen">
             </div>
         </div>
-        <div id="navbar-content" class="w-5/6 bg-gradient-to-r from-blue-50">
+        <div id="navbar-content" class="w-5/6 bg-gradient-to from-blue-50">
             <div id="navbar" class="mb-4">
                 @yield('navbar')
                 <hr class="border-2 border-blue">
