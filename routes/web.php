@@ -7,6 +7,7 @@ use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\TokoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\SiswaController;
 
 Route::get('/portofolio', [PortofolioController::class, 'index'])
     ->name('portofolio.index');
@@ -27,4 +28,12 @@ Route::put('/barang/update/{id}', [BarangController::class, 'update'])->name('ba
 Route::get('/barang/update/{id}', [BarangController::class, 'update_view'])->name('barang.edit');
 Route::get('/barang/delete/{id}', [BarangController::class, 'destroy'])->name('barang.delete');
 Route::get('/barang', [BarangController::class, 'index']);
+Route::post('/siswa/add', [SiswaController::class, 'store'])->name('siswa.kirim');
+Route::get('/siswa/add', [SiswaController::class, 'store_view'])->name('siswa.tambah');
+Route::put('/siswa/update/{id}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::get('/siswa/update/{id}', [SiswaController::class, 'update_view'])->name('siswa.edit');
+Route::get('/siswa/delete/{id}', [SiswaController::class, 'destroy'])->name('siswa.delete');
+Route::get('/siswa', [SiswaController::class, 'index']);
+
+
 
