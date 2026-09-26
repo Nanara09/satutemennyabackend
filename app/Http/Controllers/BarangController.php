@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Barang;
 use Illuminate\Http\Request;
 
+
 class BarangController extends Controller
 {
     public function store_view()
@@ -25,12 +26,12 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        $barang = new Barang();
-        $barang->name = $request->name;
-        $barang->harga = $request->harga;
-        $barang->stok = $request->stok;
-        $barang->save();
-
+        $validated = $request->validate([
+            "name" => "required|string",
+            "harga" => "required|numeric",
+            "stok" => "required|integer|min:5",
+        ]);
+        Barang::create($validated);
         return redirect('/barang');
     }
 
@@ -48,10 +49,12 @@ class BarangController extends Controller
     public function update(Request $request, string $id)
     {
         $barang = Barang::find($id);
-        $barang->name = $request->name;
-        $barang->harga = $request->harga;
-        $barang->stok = $request->stok;
-        $barang->save();
+         $validated = $request->validate([
+            "name" => "required|string",
+            "harga" => "required|numeric",
+            "stok" => "required|integer|min:5",
+        ]);
+        $barang->update($validated);
 
          return redirect('/barang');
     }

@@ -1,3 +1,21 @@
+@error('name')
+<p>error</p>
+<p class="text-red-500">
+    {{ $message }}
+</p>
+@enderror
+@error('harga')
+<p>error</p>
+<p class="text-red-500">
+    {{ $message }}
+</p>
+@enderror
+@error('stok')
+<p>error</p>
+<p class="text-red-500">
+    {{ $message }}
+</p>
+@enderror
 <form action="{{ route('barang.update', $barang->id) }}" method="POST">
     @csrf
     @method('PUT')
