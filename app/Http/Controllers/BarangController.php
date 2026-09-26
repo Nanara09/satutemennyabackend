@@ -52,7 +52,7 @@ class BarangController extends Controller
          $validated = $request->validate([
             "name" => "required|string",
             "harga" => "required|numeric",
-            "stok" => "required|integer|min:5",
+            "stok" => "required|integer|min:10",
         ]);
         $barang->update($validated);
 
