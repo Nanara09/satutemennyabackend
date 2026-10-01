@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+         Schema::create('bukus', function (Blueprint $table) {
+            $table->id();
+            $table->string('judul');
+            $table->string('penulis');
+            $table->integer('tahun_terbit')->length(4);
+            $table->integer('stok');
+            $table->timestamps();
+        });
     }
 
     /**

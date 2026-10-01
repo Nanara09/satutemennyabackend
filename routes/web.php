@@ -8,6 +8,7 @@ use App\Http\Controllers\TokoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BukuController;
 
 Route::get('/portofolio', [PortofolioController::class, 'index'])
     ->name('portofolio.index');
@@ -34,6 +35,12 @@ Route::put('/siswa/update/{id}', [SiswaController::class, 'update'])->name('sisw
 Route::get('/siswa/update/{id}', [SiswaController::class, 'update_view'])->name('siswa.edit');
 Route::get('/siswa/delete/{id}', [SiswaController::class, 'destroy'])->name('siswa.delete');
 Route::get('/siswa', [SiswaController::class, 'index']);
+Route::post('/buku/add', [BukuController::class, 'store'])->name('buku.kirim');
+Route::get('/buku/add', [BukuController::class, 'store_view'])->name('buku.tambah');
+Route::put('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.update');
+Route::get('/buku/update/{id}', [BukuController::class, 'update_view'])->name('buku.edit');
+Route::get('/buku/delete/{id}', [BukuController::class, 'destroy'])->name('buku.delete');
+Route::get('/buku', [BukuController::class, 'index']);
 
 
 
