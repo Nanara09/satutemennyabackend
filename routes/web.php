@@ -9,6 +9,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\LaporanController;
 
 Route::get('/portofolio', [PortofolioController::class, 'index'])
     ->name('portofolio.index');
@@ -41,6 +43,8 @@ Route::put('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.u
 Route::get('/buku/update/{id}', [BukuController::class, 'update_view'])->name('buku.edit');
 Route::get('/buku/delete/{id}', [BukuController::class, 'destroy'])->name('buku.delete');
 Route::get('/buku', [BukuController::class, 'index']);
+Route::resource('pegawai', PegawaiController::class);
+Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
 
 
 
