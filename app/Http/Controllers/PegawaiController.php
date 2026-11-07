@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 class PegawaiController extends Controller
 {
-    // MENAMPILKAN SEMUA PEGAWAI
     public function index()
     {
         $pegawais = Pegawai::with('departemen')->get();

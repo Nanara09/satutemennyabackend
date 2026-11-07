@@ -11,6 +11,8 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\JenisBukuController;
+use App\Http\Controllers\DataBukuController;
 
 Route::get('/portofolio', [PortofolioController::class, 'index'])
     ->name('portofolio.index');
@@ -45,6 +47,19 @@ Route::get('/buku/delete/{id}', [BukuController::class, 'destroy'])->name('buku.
 Route::get('/buku', [BukuController::class, 'index']);
 Route::resource('pegawai', PegawaiController::class);
 Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
+
+Route::get('/jenis-buku', [JenisBukuController::class, 'index']);
+Route::post('/jenis-buku', [JenisBukuController::class, 'store']);
+Route::put('/jenis-buku/{id}', [JenisBukuController::class, 'update']);
+Route::delete('/jenis-buku/{id}', [JenisBukuController::class, 'destroy']);
+Route::get('/data-jenis-buku', [JenisBukuController::class, 'getData']);
+Route::get('/data-buku', [DataBukuController::class, 'getData']);
+Route::get('/buku', [DataBukuController::class, 'index']);
+Route::post('/buku', [DataBukuController::class, 'store']);
+Route::put('/buku/{id}', [DataBukuController::class, 'update']);
+Route::delete('/buku/{id}', [DataBukuController::class, 'destroy']);
+Route::get('/buku/create', [DataBukuController::class, 'create']);
+Route::get('/buku/{id}/edit', [DataBukuController::class, 'edit']);
 
 
 
