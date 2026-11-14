@@ -61,5 +61,5 @@ Route::delete('/buku/{id}', [DataBukuController::class, 'destroy']);
 Route::get('/buku/create', [DataBukuController::class, 'create']);
 Route::get('/buku/{id}/edit', [DataBukuController::class, 'edit']);
 
-
+Route::get('/data-buku-server', [DataBukuController::class, 'getDataServerSide']);
 

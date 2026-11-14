@@ -6,6 +6,16 @@
 
 <h3>Data Buku</h3>
 
+<div class="mb-3">
+    <label for="metode-data" class="form-label">
+    </label>
+
+    <select id="metode-data" class="form-select" style="width: 200px;">
+        <option value="client">Client-Side</option>
+        <option value="server">Server-Side</option>
+    </select>
+</div>
+
 <button onclick="tambahBuku()">
     <a href="/buku/create" class="btn btn-primary mb-3" style="color:white">
     Tambah Buku
@@ -39,7 +49,7 @@
     <button class="btn btn-secondary mt-2" onclick="tutupForm()">Batal</button>
 </div>
 
-<table class="table table-bordered table-striped">
+<table id="tabel-data-buku" class="table table-bordered table-striped">
     <thead class="table-primary">
         <tr>
             <th>No</th>
@@ -58,5 +68,14 @@
         </tr>
     </tbody>
 </table>
+
+@push('styles')
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+@endpush
+
+@push('scripts')
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+@endpush
 
 @endsection
